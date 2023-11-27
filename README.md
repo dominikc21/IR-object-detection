@@ -1,14 +1,16 @@
 ## Training YOLOv5 on a Custom Dataset of Thermal Images
 
-	* Set up the code
-	* clone yolov5 to machine
-	*	install dependencies (pip install -r yolov5/requirements.txt) (I think conda should work too)
-	*	import required models (if not already done)
-	*	Importing dataset
-	*	make a new directory (mkdir)
-	*	download the dataset into it
+* Set up the code
+* clone yolov5 to machine
+	* install dependencies (pip install -r yolov5/requirements.txt) (I think conda should work too)
+	* import required models (if not already done)
+	* Importing dataset
+	* make a new directory (mkdir)
+	* download the dataset into it
  
 Details about dataset: We have found one dataset that may be adequate for our purposes, a portion of it is included in the folder 'FLIR_Dataset'. Since the training and validation frames from this set are taken from a vehicle, it is best suited for that application. However, it may be general enough for our purposes. The provided annotation of the dataset is in similar to Microsoft's COCO annotation file format, but with added modifications for FLIR's proprietary dataset management tool called Conservator. The annotations will have to be changed to fit the yolov5 model (where each image annotation is a .txt file where each line describes a bounding box, shown below). Converters can be found online, or they can be manually created.
+
+![Alt text](https://blog.paperspace.com/content/images/2021/03/image-25.png "Bounding boxes")
 
 Partition the dataset into train, validation and test sets containing approximately 80%, 10%, and 10%, respectively
 

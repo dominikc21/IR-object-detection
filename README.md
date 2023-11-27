@@ -19,4 +19,21 @@ We have found one dataset that may be adequate for our purposes, a portion of it
     * the FLIR dataset is already split
 
 * Specify training options: batch, epochs, data, workers, cfg(model architecture: yolo5s.yml, yolov5m.yml, yolov5l.yml, yolo5x.yml), weights (pretrained weights, if from scratch, use --weights ' ')
+   * I will likely use yolo5s.yml since it is the smallest model
+
+* Data config file, specify:
+   * locations of training, testing, and validation images
+   * number of classes in the dataset
+   * names of the classes in the dataset
+
+* Hyperparameter config file (unlikely that I will change anything)
+
+* Customizing network architecture (unlikely that I will change anything)
+
+* When training the model, choose:
+   * batch size (# of training examples in one forward/backward pass)
+   * image size (# pixels)
+   * number of epochs (complete passes through training set)
+ 
+Inference
 * 
